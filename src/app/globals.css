@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  --color-brand-navy: #152549;
+  --color-brand-gold: #BC9538;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +28,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #152549;
 }
