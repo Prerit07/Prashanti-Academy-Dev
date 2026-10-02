@@ -197,7 +197,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative h-screen md:h-auto overflow-hidden bg-brand-navy py-20 sm:py-28 lg:py-32 text-white">
+    <section className="relative h-auto overflow-hidden bg-brand-navy py-28 sm:py-28 lg:py-32 text-white">
      <motion.div
         initial={{ scale: 1, opacity: 0.7 }}
         animate={{
@@ -267,7 +267,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="hidden md:inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-gold shadow-sm backdrop-blur-md"
+          className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-brand-gold shadow-sm backdrop-blur-md"
         >
           <span>Corporate Training Heritage • Now Open to Learners</span>
         </motion.div>
@@ -276,7 +276,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl"
+          className="mt-6 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-8xl"
         >
           Master How <br className="hidden sm:inline" />
           <span className="relative inline-block text-brand-gold">
@@ -291,7 +291,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg"
         >
-          Corporate-grade trading discipline, institutional research, and risk management—simplified 
+          Corporate-grade trading discipline, institutional research, and risk management - simplified 
           for ambitious learners and investors.
         </motion.p>
 
