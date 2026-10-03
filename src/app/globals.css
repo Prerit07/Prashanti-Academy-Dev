@@ -3,6 +3,7 @@
 @theme {
   --color-brand-navy: #152549;
   --color-brand-gold: #BC9538;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
 }
 
 /* :root {
@@ -37,4 +38,5 @@ html {
 body {
   background-color: #FFFFFF;
   color: #152549;
+  font-family: var(--font-sans);
 }

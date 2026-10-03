@@ -201,7 +201,6 @@ export default function Header() {
       <header className="sticky top-0 z-40 w-full border-b border-brand-navy/10 bg-white/85 backdrop-blur-xl transition-all duration-300">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
           
-          {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
             <div className="relative overflow-hidden rounded-lg p-1 transition-transform duration-200 group-hover:scale-[1.02]">
               <Image
@@ -215,7 +214,6 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 rounded-full border border-slate-200/90 bg-slate-50/80 px-4 py-1.5 shadow-inner backdrop-blur-sm lg:flex">
             {navLinks.map((item) => (
               <Link
@@ -229,7 +227,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Action & Mobile Toggle */}
           <div className="flex items-center gap-3">
             <Link
               href="#contact"
@@ -275,6 +272,7 @@ export default function Header() {
                 width={140}
                 height={38}
                 className="h-8 w-auto object-contain"
+                priority
               />
               <button
                 onClick={() => setMobileMenuOpen(false)}
