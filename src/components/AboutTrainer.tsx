@@ -134,7 +134,7 @@ export default function AboutTrainer() {
             <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-3 shadow-2xl backdrop-blur-md">
               <div className="relative h-110 w-full overflow-hidden rounded-2xl bg-[#060e22]">
                 <img
-                  src="/images/rajat-prasad.PNG"
+                  src="/images/rajat-ji-image.png"
                   onError={(e) => {
                     e.currentTarget.src = "/images/rajat-prasad.jpg";
                   }}
