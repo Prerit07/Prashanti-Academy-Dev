@@ -218,7 +218,7 @@ export default function Hero() {
           opacity: [0.6, 0.85, 0.6],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="pointer-events-none absolute -right-24 -bottom-16 h-[460px] w-[460px] rounded-full blur-2xl"
+        className="pointer-events-none absolute -right-24 -bottom-16 h-115 w-115 rounded-full blur-2xl"
         style={{
           background: "radial-gradient(circle, rgba(188, 149, 56, 0.3) 0%, rgba(188, 149, 56, 0.06) 55%, transparent 80%)",
         }}
@@ -302,16 +302,15 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link
-            href="https://prashantiacademy.urbanpro.com/"
+            href="https://prashantiacademy.urbanpro.com/" target="_blank"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-gold px-8 py-4 text-sm font-semibold tracking-wide text-brand-navy shadow-lg shadow-brand-gold/20 transition-all duration-300 hover:bg-white sm:w-auto"
           >
-            {/* <Sparkles className="h-4 w-4 text-brand-navy" /> */}
             <span>Explore Online Courses</span>
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
 
           <Link
-            href="https://rajatprasad.creator-betterme.com/products"
+            href="https://rajatprasad.creator-betterme.com/products" target="_blank"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all duration-300 hover:border-brand-gold hover:bg-white/10 sm:w-auto"
           >
             <span>Offline & Corporate Batches</span>

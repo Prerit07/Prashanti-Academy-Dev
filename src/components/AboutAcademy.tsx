@@ -11,21 +11,22 @@ import {
   BookOpenCheck,
   ShieldAlert,
   ArrowRight,
+  ShieldCheck,
 } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 
 export default function AboutAcademy() {
   const pillars = [
     {
-      title: "Stock Market",
-      tagline: "Equity Valuation & Market Dynamics",
-      desc: "Master market dynamics, company valuation, and technical and fundamental analysis to build confident investment strategies.",
+      title: "Stock Market Analysis",
+      tagline: "Fundamental and Technical",
+      desc: "Master market dynamics, company valuation, and technical and fundamental analysis to build confident investment and trading strategies.",
       icon: TrendingUp,
     },
     {
       title: "Foreign Exchange (Forex)",
-      tagline: "Global Macro & Capital Flows",
-      desc: "Understand currency pairs, central bank policies, geopolitical influences, and global capital flows driving worldwide liquidity.",
+      tagline: "Basics to Advance knowledge",
+      desc: "Understand currency pairs, central bank policies, geopolitical influences, and global capital flows driving global currency",
       icon: Globe2,
     },
     {
@@ -39,6 +40,12 @@ export default function AboutAcademy() {
       tagline: "Futures, Options & Risk Hedging",
       desc: "Learn how to utilize futures, options, and structured instruments for systematic hedging, strategic speculation, and risk management.",
       icon: Layers,
+    },
+    {
+      title: "Risk Management",
+      tagline: "Learn management of currency risk and interest rate risk",
+      desc: "Understand how to protect the international business from currency fluctuation shocks and impact of interest rate changes on business profits",
+      icon: ShieldCheck,
     },
   ];
 
@@ -176,7 +183,7 @@ export default function AboutAcademy() {
             </p>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}
@@ -216,7 +223,49 @@ export default function AboutAcademy() {
                 </motion.div>
               );
             })}
-          </motion.div>
+          </motion.div> */}
+
+          <motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.15 }}
+  variants={staggerContainer}
+  className="mt-10 flex flex-wrap justify-center gap-6"
+>
+  {pillars.map((pillar) => {
+    const Icon = pillar.icon;
+    return (
+      <motion.div
+        key={pillar.title}
+        variants={itemGrowVariant}
+        className="group relative flex w-full flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-7 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-gold hover:shadow-xl hover:shadow-brand-navy/10 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+      >
+        <div>
+          <div className="inline-flex rounded-xl border border-brand-navy/10 bg-slate-50 p-3 text-brand-navy transition-colors duration-300 group-hover:bg-brand-navy group-hover:text-brand-gold">
+            <Icon className="h-6 w-6" />
+          </div>
+
+          <h4 className="mt-5 text-xl font-bold tracking-tight text-brand-navy">
+            {pillar.title}
+          </h4>
+
+          <span className="mt-1 inline-block text-xs font-semibold text-brand-gold">
+            {pillar.tagline}
+          </span>
+
+          <p className="mt-3 text-sm leading-[130%] text-slate-600">
+            {pillar.desc}
+          </p>
+        </div>
+
+        <div className="mt-6 flex items-center gap-1.5 border-t border-slate-100 pt-4 text-xs font-semibold text-brand-navy transition-colors group-hover:text-brand-gold">
+          <span>Explore syllabus</span>
+          <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+        </div>
+      </motion.div>
+    );
+  })}
+</motion.div>
         </div>
 
         <div className="mt-28">
