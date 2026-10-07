@@ -119,7 +119,7 @@
 //       />
 
 //       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
 //         <motion.div
 //           initial="hidden"
 //           whileInView="visible"
@@ -257,8 +257,11 @@ import {
   Infinity as InfinityIcon,
 } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
+import EnquiryModal from "./EnquiryModal";
+import { useState } from "react";
 
 export default function CoursesSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const courseOptions = [
     {
       type: "Online Courses",
@@ -362,7 +365,6 @@ export default function CoursesSection() {
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -379,7 +381,8 @@ export default function CoursesSection() {
           </h2>
 
           <p className="mt-3.5 text-sm sm:text-base leading-[120%] text-slate-600 max-w-2xl mx-auto">
-            Pick between live interactive sessions with real-time mentorship or self-paced recorded video libraries crafted for flexible study.
+            Pick between live interactive sessions with real-time mentorship or
+            self-paced recorded video libraries crafted for flexible study.
           </p>
         </motion.div>
 
@@ -398,8 +401,12 @@ export default function CoursesSection() {
                 className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-3 sm:p-4 shadow-xl shadow-[#0b1733]/5 transition-all duration-300 hover:border-amber-400 hover:shadow-2xl"
               >
                 <div>
-                  <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-slate-100">
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-100">
                       <img
                         src={item.image}
                         alt={item.heading}
@@ -472,16 +479,19 @@ export default function CoursesSection() {
         >
           <p className="text-xs sm:text-sm text-slate-600">
             Confused between live cohorts and self-paced recorded videos?{" "}
-            <Link
-              href="#contact"
-              className="font-bold text-[#0b1733] underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors"
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="font-bold text-[#0b1733] underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors cursor-pointer"
             >
               Get personalized course advice
-            </Link>
+            </button>
           </p>
         </motion.div>
-
       </div>
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }

@@ -344,11 +344,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X, ChevronDown } from "lucide-react";
+import EnquiryModal from "./EnquiryModal";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const aboutDropdownItems = [
     { label: "About Academy", href: "#about" },
@@ -415,6 +417,7 @@ export default function Header() {
                 width={170}
                 height={45}
                 priority
+                loading="eager"
                 className="h-10 md:h-14 w-auto object-contain"
               />
             </div>
@@ -487,9 +490,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="#contact"
-              className={`group relative inline-flex items-center gap-1 md:gap-2 overflow-hidden rounded-xl border border-brand-gold/40 px-3 md:px-5 py-2 md:py-2.5 text-xs font-medium md:font-semibold capitalize md:uppercase tracking-wider transition-all duration-300 active:scale-95 ${
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className={`group relative inline-flex items-center gap-1 md:gap-2 overflow-hidden rounded-xl border border-brand-gold/40 px-3 md:px-5 py-2 md:py-2.5 text-xs font-medium md:font-semibold capitalize md:uppercase tracking-wider transition-all duration-300 active:scale-95 cursor-pointer ${
                 activeSection === "contact"
                   ? "bg-brand-gold text-brand-navy font-bold shadow-md shadow-brand-gold/30"
                   : "bg-brand-navy text-white hover:border-brand-gold hover:bg-brand-gold hover:text-brand-navy shadow-sm"
@@ -497,7 +500,7 @@ export default function Header() {
             >
               <span>Contact us</span>
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
+            </button>
 
             <button
               onClick={() => setMobileMenuOpen(true)}
@@ -622,14 +625,13 @@ export default function Header() {
           </div>
 
           <div className="pt-6 border-t border-slate-100 space-y-3">
-            <Link
-              href="#contact"
-              onClick={() => setMobileMenuOpen(false)}
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-navy py-3 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition-all active:bg-brand-gold active:text-brand-navy"
             >
               <span>Contact us</span>
               <ArrowUpRight className="h-4 w-4" />
-            </Link>
+            </button>
 
             <p className="text-center text-[11px] text-slate-400">
               Prashanti Academy
@@ -637,6 +639,10 @@ export default function Header() {
           </div>
         </aside>
       </div>
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 }
