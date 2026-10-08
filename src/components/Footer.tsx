@@ -480,7 +480,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs sm:text-sm leading-relaxed text-slate-400 max-w-md">
-              Premier institutional training academy led by <strong className="text-slate-200">Rajat Prasad</strong>. Imparting real-world mastery across Treasury Markets, Wholesale Banking, Foreign Exchange, and Systematic Risk Frameworks.
+              Premier institutional training academy led by <strong className="text-slate-200">Rajat Prasad</strong>. Imparting real-world mastery across Treasury Markets, Foreign Exchange, and Systematic Risk Frameworks.
             </p>
 
             <div className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-brand-gold backdrop-blur-md">
@@ -523,7 +523,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-                Executive Inquiries
+                General Inquiries
               </h4>
             </div>
 
