@@ -403,16 +403,220 @@
 //   );
 // }
 
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import {
+//   ArrowUpRight,
+//   ShieldCheck,
+//   Mail,
+//   Phone,
+//   MapPin,
+//   ExternalLink,
+//   ChevronRight,
+// } from "lucide-react";
+// import { useState } from "react";
+// import EnquiryModal from "./EnquiryModal";
+
+// export default function Footer() {
+//   const [isModalOpen, setIsModalOpen] = useState(false);
+//   const socialLinks = [
+//     {
+//       name: "Youtube",
+//       href: "https://www.youtube.com/@prashantiforex",
+//       iconPath: "/images/youtube.svg",
+//       hoverColor: "hover:border-[#FF0000] hover:bg-[#FF0000]/15",
+//     },
+//     {
+//       name: "LinkedIn",
+//       href: "https://www.linkedin.com/company/prashanti-forex/",
+//       iconPath: "/images/linkedin.svg",
+//       hoverColor: "hover:border-[#0A66C2] hover:bg-[#0A66C2]/15",
+//     },
+//     {
+//       name: "Instagram",
+//       href: "https://www.instagram.com/prashanti_forex",
+//       iconPath: "/images/instagram.svg",
+//       hoverColor: "hover:border-[#E4405F] hover:bg-[#E4405F]/15",
+//     },
+//     {
+//       name: "Facebook",
+//       href: "https://www.facebook.com/PrashantiForex/",
+//       iconPath: "/images/facebook.svg",
+//       hoverColor: "hover:border-[#1877F2] hover:bg-[#1877F2]/15",
+//     },
+//   ];
+
+//   const quickLinks = [
+//     { label: "About Academy", href: "#about" },
+//     { label: "Mentor Profile", href: "#trainer" },
+//     { label: "Previous Trainings", href: "#previous-trainings" },
+//     { label: "Learning Formats", href: "#courses" },
+//     { label: "Student Reviews", href: "#reviews" },
+//   ];
+
+//   return (
+//     <footer className="relative overflow-hidden bg-[#081226] text-slate-300 border-t border-white/10 pt-16 pb-10">
+      
+//       <div
+//         className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full opacity-15 blur-3xl"
+//         style={{ backgroundColor: "#BC9538" }}
+//       />
+
+//       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+//         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 pb-12 border-b border-white/10">
+          
+//           <div className="lg:col-span-5 space-y-4">
+//             <Link href="/" className="inline-block">
+//               <Image
+//                 src="/images/prashanti-academy-logo.png"
+//                 alt="Prashanti Academy"
+//                 width={170}
+//                 height={45}
+//                 className="h-9 md:h-11 w-auto object-contain brightness-0 invert"
+//               />
+//             </Link>
+
+//             <p className="text-xs sm:text-sm leading-relaxed text-slate-400 max-w-md">
+//               Premier institutional training academy led by <strong className="text-slate-200">Rajat Prasad</strong>. Imparting real-world mastery across Treasury Markets, Foreign Exchange, and Systematic Risk Frameworks.
+//             </p>
+
+//             <div className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold text-brand-gold backdrop-blur-md">
+//               <ShieldCheck className="h-4 w-4 text-brand-gold" />
+//               <span>Executive Corporate Training Excellence</span>
+//             </div>
+
+//             <div className="pt-1">
+//               <a
+//                 href="https://prashantiacademy.urbanpro.com/"
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="group inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-gold transition-colors hover:text-white"
+//               >
+//                 <span>Verified UrbanPro Profile</span>
+//                 <ExternalLink className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+//               </a>
+//             </div>
+//           </div>
+
+//           <div className="lg:col-span-3">
+//             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+//               Quick Links
+//             </h4>
+//             <ul className="mt-4 space-y-2.5">
+//               {quickLinks.map((link) => (
+//                 <li key={link.label}>
+//                   <Link
+//                     href={link.href}
+//                     className="group inline-flex items-center gap-1.5 text-xs text-slate-400 transition-colors duration-200 hover:text-brand-gold"
+//                   >
+//                     <ChevronRight className="h-3 w-3 text-slate-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-brand-gold" />
+//                     <span>{link.label}</span>
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           <div className="lg:col-span-4 space-y-4">
+//             <div>
+//               <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+//                 General Inquiries
+//               </h4>
+//             </div>
+
+//             <ul className="space-y-2.5">
+//               <li>
+//                 <a
+//                   href="mailto:rajatprasad@prashantiacademy.in"
+//                   className="group flex items-center gap-2.5 text-xs text-slate-300 transition-colors hover:text-brand-gold"
+//                 >
+//                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors group-hover:border-brand-gold/40 group-hover:bg-brand-gold/10">
+//                     <Mail className="h-3.5 w-3.5 text-brand-gold" />
+//                   </div>
+//                   <span>rajatprasad@prashantiacademy.in</span>
+//                 </a>
+//               </li>
+//               <li>
+//                 <a  
+//                   href="tel:+91 9930093014"
+//                   className="group flex items-center gap-2.5 text-xs text-slate-300 transition-colors hover:text-brand-gold"
+//                 >
+//                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors group-hover:border-brand-gold/40 group-hover:bg-brand-gold/10">
+//                     <Phone className="h-3.5 w-3.5 text-brand-gold" />
+//                   </div>
+//                   <span>Schedule Consultation Call</span>
+//                 </a>
+//               </li>
+            
+//             </ul>
+
+//             <div className="pt-2">
+//               <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+//                 Connect With Us
+//               </p>
+//               <div className="mt-2.5 flex items-center gap-2">
+//                 {socialLinks.map((social) => (
+//                   <a
+//                     key={social.name}
+//                     href={social.href}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     aria-label={social.name}
+//                     className={`flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 ${social.hoverColor}`}
+//                   >
+//                     <Image
+//                       src={social.iconPath}
+//                       alt={social.name}
+//                       width={16}
+//                       height={16}
+//                       className="h-4 w-4 object-contain invert brightness-0"
+//                     />
+//                   </a>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <div className="pt-2">
+//               <button
+//                 onClick={() => setIsModalOpen(true)}
+//                 className="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-brand-gold/40 bg-brand-gold/10 py-2.5 text-xs font-bold uppercase tracking-wider text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-slate-950 active:scale-98 cursor-pointer"
+//               >
+//                 <span>Enroll Now</span>
+//                 <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+//               </button>
+//             </div>
+//           </div>
+
+//         </div>
+
+//         <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-slate-500">
+//           <p>
+//             © {new Date().getFullYear()} Prashanti Academy. All rights reserved.
+//           </p>
+//         </div>
+
+//       </div>
+//       <EnquiryModal
+//                     isOpen={isModalOpen}
+//                     onClose={() => setIsModalOpen(false)}
+//                   />
+//     </footer>
+//   );
+// }
+
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   ArrowUpRight,
   ShieldCheck,
   Mail,
   Phone,
-  MapPin,
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
@@ -420,40 +624,47 @@ import { useState } from "react";
 import EnquiryModal from "./EnquiryModal";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const getHref = (targetId: string) => {
+    return isHomePage ? `#${targetId}` : `/#${targetId}`;
+  };
+
   const socialLinks = [
     {
       name: "Youtube",
-      href: "https://youtube.com",
+      href: "https://www.youtube.com/@prashantiforex",
       iconPath: "/images/youtube.svg",
       hoverColor: "hover:border-[#FF0000] hover:bg-[#FF0000]/15",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/company/prashanti-forex/",
       iconPath: "/images/linkedin.svg",
       hoverColor: "hover:border-[#0A66C2] hover:bg-[#0A66C2]/15",
     },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/prashanti_forex",
       iconPath: "/images/instagram.svg",
       hoverColor: "hover:border-[#E4405F] hover:bg-[#E4405F]/15",
     },
     {
       name: "Facebook",
-      href: "https://facebook.com",
+      href: "https://www.facebook.com/PrashantiForex/",
       iconPath: "/images/facebook.svg",
       hoverColor: "hover:border-[#1877F2] hover:bg-[#1877F2]/15",
     },
   ];
 
   const quickLinks = [
-    { label: "About Academy", href: "#about" },
-    { label: "Mentor Profile", href: "#trainer" },
-    { label: "Previous Trainings", href: "#previous-trainings" },
-    { label: "Learning Formats", href: "#courses" },
-    { label: "Student Reviews", href: "#reviews" },
+    { label: "About Academy", targetId: "about" },
+    { label: "Mentor Profile", targetId: "trainer" },
+    // { label: "Previous Trainings", targetId: "previous-trainings" },
+    { label: "Learning Formats", targetId: "courses" },
+    { label: "Student Reviews", targetId: "reviews" },
   ];
 
   return (
@@ -509,7 +720,7 @@ export default function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
-                    href={link.href}
+                    href={getHref(link.targetId)}
                     className="group inline-flex items-center gap-1.5 text-xs text-slate-400 transition-colors duration-200 hover:text-brand-gold"
                   >
                     <ChevronRight className="h-3 w-3 text-slate-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-brand-gold" />
@@ -530,27 +741,26 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="mailto:contact@prashantiacademy.com"
+                  href="mailto:rajatprasad@prashantiacademy.in"
                   className="group flex items-center gap-2.5 text-xs text-slate-300 transition-colors hover:text-brand-gold"
                 >
                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors group-hover:border-brand-gold/40 group-hover:bg-brand-gold/10">
                     <Mail className="h-3.5 w-3.5 text-brand-gold" />
                   </div>
-                  <span>contact@prashantiacademy.com</span>
+                  <span>rajatprasad@prashantiacademy.in</span>
                 </a>
               </li>
               <li>
-                <Link
-                  href="#contact"
+                <a  
+                  href="tel:+919930093014"
                   className="group flex items-center gap-2.5 text-xs text-slate-300 transition-colors hover:text-brand-gold"
                 >
                   <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors group-hover:border-brand-gold/40 group-hover:bg-brand-gold/10">
                     <Phone className="h-3.5 w-3.5 text-brand-gold" />
                   </div>
                   <span>Schedule Consultation Call</span>
-                </Link>
+                </a>
               </li>
-            
             </ul>
 
             <div className="pt-2">
@@ -599,10 +809,11 @@ export default function Footer() {
         </div>
 
       </div>
+
       <EnquiryModal
-                    isOpen={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                  />
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </footer>
   );
 }

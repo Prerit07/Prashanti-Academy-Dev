@@ -40,3 +40,177 @@ body {
   color: #152549;
   font-family: var(--font-sans);
 }
+
+/* ===================================================
+   LIGHT MODE: WORDPRESS BLOG CONTENT SYSTEM
+=================================================== */
+
+.wp-blog-content {
+  font-size: 1.0625rem; /* 17px base for optimal reading */
+  line-height: 1.8;
+  color: #334155; /* Slate 700 */
+}
+
+/* Paragraph Spacing */
+.wp-blog-content p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Headings */
+.wp-blog-content h1,
+.wp-blog-content h2,
+.wp-blog-content h3,
+.wp-blog-content h4 {
+  color: #0f172a; /* Slate 900 */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.wp-blog-content h2 {
+  font-size: 1.75rem; /* ~28px */
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.wp-blog-content h3 {
+  font-size: 1.375rem; /* ~22px */
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.wp-blog-content h4 {
+  font-size: 1.125rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Links */
+.wp-blog-content a {
+  color: #936c1e; /* Gold Darker */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.wp-blog-content a:hover {
+  color: #081226;
+}
+
+/* Lists */
+.wp-blog-content ul {
+  list-style-type: disc;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.wp-blog-content ol {
+  list-style-type: decimal;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.wp-blog-content li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+/* Blockquotes */
+.wp-blog-content blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.75rem;
+  border-left: 4px solid #bc9538;
+  background-color: #f8fafc;
+  border-radius: 0 1rem 1rem 0;
+  color: #1e293b;
+  font-style: italic;
+}
+
+.wp-blog-content blockquote p {
+  margin: 0;
+}
+
+/* Tables (Responsive scroll container) */
+.wp-blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9375rem;
+  display: block;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+}
+
+.wp-blog-content th {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.wp-blog-content td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.wp-blog-content tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* WordPress Images and Figures */
+.wp-blog-content figure {
+  margin: 2.5rem 0;
+}
+
+.wp-blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+}
+
+.wp-blog-content figcaption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Code & Preformatted Blocks */
+.wp-blog-content pre {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  margin: 1.75rem 0;
+}
+
+.wp-blog-content code {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  font-size: 0.875em;
+  font-family: monospace;
+}
+
+.wp-blog-content hr {
+  margin: 3rem 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
