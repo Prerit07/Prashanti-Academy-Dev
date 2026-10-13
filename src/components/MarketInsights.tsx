@@ -71,13 +71,13 @@ export default async function MarketInsights() {
                   >
                     <div>
                       <Link href={`/blogs/${post.slug}`} className="block">
-                        <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#060e22]">
+                        <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-[#060e22]">
                           <Image
                             src={featuredImg}
                             alt={cleanTitle}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                           />
                           <div className="absolute inset-0 bg-linear-to-t from-[#081226]/80 via-transparent to-transparent" />
                         </div>

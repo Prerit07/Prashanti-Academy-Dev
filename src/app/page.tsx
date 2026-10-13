@@ -7,6 +7,8 @@ import MarketInsights from "@/components/MarketInsights";
 import PreviousTrainings from "@/components/PreviousTrainings";
 import StudentReviews from "@/components/StudentReviews";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <div>
